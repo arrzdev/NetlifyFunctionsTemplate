@@ -6,7 +6,7 @@ exports.handler = async function (event, context) {
   const { path, httpMethod, headers, queryStringParameters, body } = event;
   // return some JSON data with a status of 200
 
-  const response = await fetch("https://fervent-borg-34cc8d.netlify.app/.netlify/functions/practice")
+  const response = await fetch("https://coronavirus-19-api.herokuapp.com/countries/Portugal")
 
   const data = await response.json()
 
