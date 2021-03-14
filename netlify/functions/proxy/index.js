@@ -6,7 +6,7 @@ exports.handler = async function (event, context) {
   const { path, httpMethod, headers, queryStringParameters, body } = event;
   // return some JSON data with a status of 200
 
-  body={
+  const body={
     authorization: "Njg1MTozMDA4NDg1Mw=="
   }
   
@@ -16,9 +16,7 @@ exports.handler = async function (event, context) {
   headers: { "Content-Type": "application/json" }
 })
 
-  //https://servicos.aeof.pt/inovarconsulta/api/loginFU/
-  // data={'authorization':encoded_login}
-
+  .catch(err => console.log(err))
   const data = await response.json()
 
   return {
