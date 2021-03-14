@@ -6,7 +6,18 @@ exports.handler = async function (event, context) {
   const { path, httpMethod, headers, queryStringParameters, body } = event;
   // return some JSON data with a status of 200
 
-  const response = await fetch("https://coronavirus-19-api.herokuapp.com/countries/Portugal")
+  data={
+    authorization: "Njg1MTozMDA4NDg1Mw=="
+  }
+  
+  const response = await fetch("https://servicos.aeof.pt/inovarconsulta/api/loginFU/"), {
+  method: "post",
+  body: JSON.stringify(body),
+  headers: { "Content-Type": "application/json" }
+})
+
+  //https://servicos.aeof.pt/inovarconsulta/api/loginFU/
+  // data={'authorization':encoded_login}
 
   const data = await response.json()
 
