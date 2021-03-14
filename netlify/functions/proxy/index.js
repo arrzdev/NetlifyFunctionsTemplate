@@ -1,7 +1,7 @@
 const fetch = require("node-fetch")
 
 const body = {
-  authorization: "Njg1MTozMDA4NDg1Mw=="
+  "authorization": "Njg1MTozMDA4NDg1Mw=="
 }
 
 fetch("https://servicos.aeof.pt/inovarconsulta/api/loginFU/", {
